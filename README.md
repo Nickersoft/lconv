@@ -9,6 +9,23 @@ which only exists as an ISO 639-3 language code. Therefore, requesting the ISO 6
 `null`. *However,* Cantonese belongs to the Chinese macro-language, which *does* have an ISO 639-1 code. If we resolve
 the Cantonese language code to Chinese, then we'll get `zh` back instead of `null`. Pretty neat, eh?
 
+## Using the API
+To use lconv is extremely simple. Use it like this:
+
+```javascript
+const lconv = require('lconv');
+
+lconv('English', { from: 'label', to: 2 }); // ==> eng
+lconv('eng', { from: 3, to: 1 }); // 
+lconv('yue', { from: 3, to: 1, resolve: true }); // ==> zh
+```
+
+lconv takes three options:
+
+- **from:** The ISO code of the given string. Can be either 1, 2, 3, or "label". If it is not provided it will be guessed.
+- **to:** The ISO code to convert to. Can be either 1, 2, 3, or "label". If it is not provided it will be guessed. 
+- **resolve:** Boolean denoting whether to resolve language codes or not. By default this is set to "false".
+
 ## Generating Data
 If you do for some reason clone this repo, to generate the JSON data file needed for the module to run, just run:
 
