@@ -1,0 +1,31 @@
+{
+  "name": "iso-converter",
+  "version": "1.0.0",
+  "main": "index.es5.js",
+  "scripts": {
+    "start": "node -r @babel/register index.js",
+    "data": "node data.js",
+    "build": "babel index.js --out-file index.es5.js",
+    "prepublish": "npm run build",
+    "postpublish": "rimraf index.es5.js && git push --follow-tags"
+  },
+  "files": [
+    "index.es5.js",
+    "data.json"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.42",
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "@babel/register": "^7.0.0-beta.42",
+    "prettier": "^1.11.1",
+    "request": "^2.85.0",
+    "rimraf": "^2.6.2",
+    "through2": "^2.0.3",
+    "unzip": "^0.1.11"
+  }
+}
