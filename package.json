@@ -1,10 +1,10 @@
 {
-  "name": "iso-converter",
+  "name": "lconv",
   "version": "0.0.1",
   "main": "index.es5.js",
   "scripts": {
     "data": "node data.js",
-    "prepublish": "npm run build",
+    "prepublish": "babel index.js --out-file index.es5.js",
     "postpublish": "rimraf index.es5.js && git push --follow-tags"
   },
   "files": [
