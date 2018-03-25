@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "main": "index.es5.js",
   "scripts": {
-    "start": "node -r @babel/register index.js",
     "data": "node data.js",
-    "build": "babel index.js --out-file index.es5.js",
     "prepublish": "npm run build",
     "postpublish": "rimraf index.es5.js && git push --follow-tags"
   },
