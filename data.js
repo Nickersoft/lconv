@@ -65,7 +65,7 @@ function handleStandardTable(entry) {
   );
 }
 
-request(`http://www-01.sil.org/iso639-3/iso-639-3_Code_Tables_${date}.zip`)
+request(`https://iso639-3.sil.org/sites/iso639-3/files/downloads/iso-639-3_Code_Tables_${date}.zip`)
   .pipe(unzip.Parse())
   .on("entry", function(entry) {
     var fileName = entry.path;
