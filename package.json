@@ -13,17 +13,17 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.5"
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.42",
-    "@babel/core": "^7.0.0-beta.42",
-    "@babel/preset-env": "^7.0.0-beta.42",
-    "@babel/register": "^7.0.0-beta.42",
-    "prettier": "^1.11.1",
-    "request": "^2.85.0",
-    "rimraf": "^2.6.2",
-    "through2": "^2.0.3",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0",
+    "prettier": "^1.16.4",
+    "request": "^2.88.0",
+    "rimraf": "^2.6.3",
+    "through2": "^3.0.1",
     "unzip": "^0.1.11"
   }
 }
