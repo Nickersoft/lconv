@@ -1,12 +1,17 @@
 {
+  "include": ["src"],
   "compilerOptions": {
-    "noEmit": true,
     "target": "es2020",
     "lib": ["es2020", "DOM"],
     "module": "ESNext",
     "moduleResolution": "Node",
     "strict": true,
+    "declarationDir": "dist",
     "sourceMap": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "emitDeclarationOnly": true,
+    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "declaration": true
