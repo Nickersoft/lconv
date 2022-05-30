@@ -5,8 +5,8 @@ import { resolveType } from "./resolve-type";
 import data from "./data.json";
 
 interface ConvertOptions {
-  from: 1 | 2 | 3 | "label";
-  to: 1 | 2 | 3 | "label";
+  from?: 1 | 2 | 3 | "label";
+  to?: 1 | 2 | 3 | "label";
   resolve?: boolean;
 }
 
@@ -23,7 +23,7 @@ function normalize(value: string|null) {
   return value;
 }
 
-function convert(input: string, { from, to, resolve }: ConvertOptions) {
+function convert(input: string, { from, to, resolve }: ConvertOptions = {}) {
   const { languages, macro } = data as LanguageData;
 
   const isoFrom = from || resolveType(input);
