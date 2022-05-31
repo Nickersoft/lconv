@@ -1,11 +1,12 @@
 {
   "name": "lconv",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
-    "import": "node --es-module-specifier-resolution=node --loader ts-node/esm src/importer/import.ts",
-    "build": "concurrently \"yarn:tsc\" \"yarn:esbuild --sourcemap --target=node16 --platform=node --format=esm --outdir=dist src/index.ts\"",
+    "import": "node --loader ts-node/esm src/importer/import.ts",
+    "build": "concurrently \"cp ./src/data.json ./dist/data.json\" \"yarn:tsc\" \"yarn:esbuild --sourcemap --target=node16 --platform=node --format=esm --outdir=dist ./src/*.ts\"",
     "prepublish": "yarn build",
     "postpublish": "rimraf dist && git push --follow-tags",
     "test": "jest"

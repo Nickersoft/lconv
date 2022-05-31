@@ -1,6 +1,6 @@
-import { Language } from "./importer/handle-standard";
-import { resolveField } from "./resolve-field";
-import { resolveType } from "./resolve-type";
+import { Language } from "./importer/handle-standard.js";
+import { resolveField } from "./resolve-field.js";
+import { resolveType } from "./resolve-type.js";
 
 import data from "./data.json";
 

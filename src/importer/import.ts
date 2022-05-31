@@ -4,8 +4,8 @@ import { resolve } from "node:path";
 import fetch from "node-fetch";
 import AdmZip from "adm-zip";
 
-import { handleMacroLanguages } from "./handle-macro";
-import { handleStandardLanguages } from "./handle-standard";
+import { handleMacroLanguages } from "./handle-macro.js";
+import { handleStandardLanguages } from "./handle-standard.js";
 
 const date = "20220311";
 const url = `https://iso639-3.sil.org/sites/iso639-3/files/downloads/iso-639-3_Code_Tables_${date}.zip`;

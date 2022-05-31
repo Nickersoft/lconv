@@ -1,4 +1,4 @@
-import { Language } from "./importer/handle-standard";
+import { Language } from "./importer/handle-standard.js";
 
 export function resolveField(type: number | string): keyof Language {
   switch (type) {
