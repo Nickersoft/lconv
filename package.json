@@ -1,9 +1,8 @@
 {
   "name": "lconv",
   "version": "0.0.4",
-  "module": "dist/index.js",
+  "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "type": "module",
   "scripts": {
     "import": "node --es-module-specifier-resolution=node --loader ts-node/esm src/importer/import.ts",
     "build": "concurrently \"yarn:tsc\" \"yarn:esbuild --sourcemap --target=node16 --platform=node --format=esm --outdir=dist src/index.ts\"",
