@@ -2,7 +2,7 @@ import { Language } from "./importer/handle-standard.js";
 import { resolveField } from "./resolve-field.js";
 import { resolveType } from "./resolve-type.js";
 
-import data from "./data.json";
+import data from "./data.json" assert { type: "json" };
 
 interface ConvertOptions {
   from?: 1 | 2 | 3 | "label";
