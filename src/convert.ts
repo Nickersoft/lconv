@@ -1,4 +1,5 @@
-import type { LanguageCode } from "../shared/types";
+import type { LanguageCode } from "@/shared/types";
+
 import { getLanguage } from "./get-language";
 import { normalize } from "./utils";
 
