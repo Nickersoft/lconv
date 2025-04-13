@@ -14,7 +14,7 @@
   "scripts": {
     "import": "tsx scripts/import.ts",
     "build": "tsup src/index.ts --dts --format esm",
-    "prepublish": "yarn build",
+    "prepublish": "pnpm run build",
     "test": "vitest --no-watch"
   },
   "files": [
