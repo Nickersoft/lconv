@@ -1,42 +1,36 @@
 {
   "name": "lconv",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "typings": "dist/index.d.ts",
   "type": "module",
   "engines": {
-    "node": ">=16.15.1"
+    "node": ">=22.0.0"
   },
   "scripts": {
-    "import": "node --loader ts-node/esm src/importer/import.ts",
-    "build": "concurrently \"mkdir -p dist && cp ./src/data.json ./dist/data.json\" \"yarn:tsc\" \"yarn:esbuild --sourcemap --target=node16.15.1 --platform=node --format=esm --outdir=dist ./src/*.ts\"",
+    "import": "tsx scripts/import.ts",
+    "build": "tsup src/index.ts --dts --format esm",
     "prepublish": "yarn build",
-    "postpublish": "rimraf dist && git push --follow-tags",
-    "test": "jest"
+    "test": "vitest --no-watch"
   },
   "files": [
     "dist"
   ],
   "license": "MIT",
-  "dependencies": {
-    "adm-zip": "^0.5.9",
-    "csv": "^6.1.0",
-    "lodash": "^4.17.11",
-    "node-fetch": "^3.2.4",
-    "typescript": "^4.7.2"
-  },
   "devDependencies": {
-    "@types/adm-zip": "^0",
-    "@types/jest": "^27.5.1",
-    "@types/lodash": "^4.14.182",
-    "@types/node": "^17.0.36",
-    "concurrently": "^7.2.1",
-    "esbuild": "^0.14.42",
-    "jest": "^28.1.0",
-    "prettier": "^1.16.4",
-    "rimraf": "^2.6.3",
-    "ts-jest": "^28.0.3",
-    "ts-node": "^10.8.0"
+    "@types/adm-zip": "^0.5.7",
+    "@types/node": "^22.14.1",
+    "adm-zip": "^0.5.16",
+    "concurrently": "^9.1.2",
+    "csv": "^6.3.11",
+    "prettier": "^3.5.3",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "valibot": "^1.0.0",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.1.1"
   },
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "pnpm@10.8.0+sha512.0e82714d1b5b43c74610193cb20734897c1d00de89d0e18420aebc5977fa13d780a9cb05734624e81ebd81cc876cd464794850641c48b9544326b5622ca29971"
 }

@@ -1,5 +1,6 @@
 {
-  "include": ["src"],
+  "include": ["src/**/*.ts", "scripts/**/*.ts", "src/**/*.json"],
+  "exclude": ["node_modules", "dist"],
   "compilerOptions": {
     "target": "ESNext",
     "lib": ["ES2020", "DOM"],
@@ -14,6 +15,10 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
-    "declaration": true
+    "declaration": true, 
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["*"]
+    },
   }
 }
