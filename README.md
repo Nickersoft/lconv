@@ -30,8 +30,6 @@ lconv takes three options:
 If you do for some reason clone this repo, to generate the JSON data file needed for the module to run, just run:
 
 ```bash
-$ npm run data
+$ pnpm run import
 ```
 
-## Testing
-We'll... umm... add tests at some point. Check back later.
