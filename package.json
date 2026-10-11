@@ -25,9 +25,9 @@
     "valibot": "^1.0.0"
   },
   "devDependencies": {
-    "@types/adm-zip": "^0.5.7",
+    "@types/adm-zip": "^0.6.0",
     "@types/node": "^22.14.1",
-    "adm-zip": "^0.5.16",
+    "adm-zip": "^0.6.0",
     "csv": "^6.3.11",
     "prettier": "^3.5.3",
     "tsup": "^8.4.0",
